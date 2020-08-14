@@ -16,11 +16,14 @@ The function longest_walk(M) takes in a matrix and returns the length of the lon
 In this file, I implement the trie (prefix tree) data structure which is used to preprocess a text. The text refers to a list of strings composed only of lowercase English alphabet characters. This trie is used to:
 
 1. Find the number of times a word occurrs in the text (implemented in the function string_freq(self, query_str)),
+
 2. Find the number of words in the text that have a certain string as a prefix (implemented in the function prefix_freq(self, query_str)),
+
 3. Find the number of words in the text that have a certain string containing a single wildcard as a prefix (implemented in the function wildcard_prefix_freq(self, query_str)).
 
 ## 4. Graphs (graphs.py)
-In this file, I implement the graph data structure, with vertex IDs (numbers in the range [0, n-1] and weights, to solve a variety of different problems. The following is a description of the problems:
+In this file, I implement the graph data structure, with vertex IDs (numbers in the range [0, n-1] and weights, to solve a variety of different problems. The following are descriptions of the problems:
 
 1. In the function shallowest_spanning_tree(self), I used the Floyd-Warshall algorithm in order to find the shallowest spanning tree in the graph.
+
 2. In the function shortest_errand(self, home, destination, ice_locs, ice_cream_locs), I pre-processed the graph and used the Dijkstra algorithm (with a min-heap data structure) in order to solve the problem of getting from the home vertex to the destination vertex with the requirement of visiting a vertex in ice_locs and a vertex in ice_cream_locs, in that order. To clarify, home and destination are vertices in the graph and ice_locs and ice_cream_locs are each a list of vertices in the graph.
